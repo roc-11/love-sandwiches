@@ -32,13 +32,15 @@ def get_sales_data():
 
         data_str = input("Enter your data here: ")
         
-        #break the string at the commas and check is each 
-        #number valid (split returns as list)
+        """ break the string at the commas and check is each 
+        number valid (split returns as list) """
         sales_data = data_str.split(",")
     
         if validate_data(sales_data):
             print("Data is valid!")
             break
+
+    return sales_data
 
 
 def validate_data(values):
@@ -59,4 +61,4 @@ def validate_data(values):
 
     return True
 
-get_sales_data()
+data = get_sales_data()
