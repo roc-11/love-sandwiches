@@ -132,3 +132,14 @@ def main():
 
 print("Welcome to Love Sandwiches Data Automation")
 main()
+
+# code institute challenge
+def get_stock_values(data):
+    headings = SHEET.worksheet("sales").row_values(1)
+    
+    dictionary = dict(zip(headings,data))
+    
+    return dictionary
+    
+stock_values = get_stock_values(stock_data)
+print(stock_values)
